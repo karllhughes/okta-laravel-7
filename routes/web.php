@@ -28,3 +28,5 @@ Route::get('/login/okta/callback', 'Auth\LoginController@handleProviderCallback'
 Route::get('/fluent-strings', 'NewFeatureController@fluentStrings');
 
 Route::get('/http-wrapper', 'NewFeatureController@httpWrapper');
+
+Route::get('/users/{user:id}/posts/{post:id}', 'NewFeatureController@getUserPost');

@@ -6,6 +6,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
+use App\User;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
@@ -31,5 +33,10 @@ class NewFeatureController extends Controller
         } else {
             dd($response->status());
         }
+    }
+
+    public function getUserPost(User $user, Post $post)
+    {
+        dd($post->toArray());
     }
 }

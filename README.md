@@ -13,3 +13,5 @@ Using Docker:
 - Run with volume: `docker run -v $(pwd):/var/www/html -d --name=laravel-7 --rm -p 8000:80 laravel-7`
 
 View the app at `localhost:8000`
+
+Run artisan commands: `docker exec -it laravel-7 php artisan ...`

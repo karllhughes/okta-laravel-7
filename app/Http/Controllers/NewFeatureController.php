@@ -15,9 +15,15 @@ class NewFeatureController extends Controller
 {
     public function fluentStrings()
     {
-        $string = Str::of('the Rain in Spain falls Mainly on the plain ');
+        // Old way
+        $string = Str::slug(trim(' the Rain in Spain falls Mainly on the plain '));
 
-        dd($string->trim(' ')->slug('-'));
+        // New way
+        $string = Str::of(' the Rain in Spain falls Mainly on the plain ')
+            ->trim(' ')
+            ->slug('-');
+
+        dd($string);
     }
 
     public function httpWrapper()
